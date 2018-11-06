@@ -10,7 +10,7 @@ class ProcessingTest extends PApplet {
 
   var circles: Seq[PVector] = Seq.empty
 
-  val ROWS = 50
+  val ROWS = 66
   val COLS = 50
 
   val colourRed = color(250, 112, 154)
@@ -44,15 +44,15 @@ class ProcessingTest extends PApplet {
     val mousePos = new PVector(mouseX, mouseY)
     recalc(mousePos)
     // draw the pointers
-    pointers.foreach(p => {
-      val dist = mousePos.dist(p.pos)
+    strokeWeight(2)
+    pointers.foreach(pointer => {
+      val dist = mousePos.dist(pointer.pos).toInt
       val amt =  dist / DIAG_DIST
       val colour = lerpColor(colourRed, colourOrange, amt.toFloat)
       val lineLength = 10f
-      val end = p.pos.copy.add(p.dir.copy.mult(lineLength))
-      strokeWeight(2)
+      val endPoint = pointer.pos.copy.add(pointer.dir.copy.mult(lineLength))
       stroke(colour)
-      line(p.pos.x, p.pos.y, end.x, end.y)
+      line(pointer.pos.x, pointer.pos.y, endPoint.x, endPoint.y)
     })
   }
 
