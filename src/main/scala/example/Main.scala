@@ -3,6 +3,6 @@ package example
 import processing.core.PApplet
 
 object Main extends App {
-  PApplet.main("example.ProcessingTest")
+  PApplet.main("example.VectorFieldSketch")
 }
 

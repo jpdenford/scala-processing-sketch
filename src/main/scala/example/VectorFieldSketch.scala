@@ -2,7 +2,7 @@ package example
 import processing.core.{PApplet, PVector}
 import scala.collection.immutable.Range
 
-class ProcessingTest extends PApplet {
+class VectorFieldSketch extends PApplet {
 
   val WIDTH = 1024
   val HEIGHT = 768
