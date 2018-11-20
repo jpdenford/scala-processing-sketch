@@ -1,4 +1,4 @@
-package example
+package sketch
 import processing.core.{PApplet, PVector}
 import scala.collection.immutable.Range
 

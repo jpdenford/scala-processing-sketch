@@ -1,4 +1,4 @@
-package example
+package sketch
 
 import org.scalatest._
 
